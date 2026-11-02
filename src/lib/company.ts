@@ -7,7 +7,7 @@ export const COMPANY = {
   legalName: "Alastella Technologies Limited",
   tradingName: "Alastella",
   /** Public contact address at our own domain. */
-  email: null as string | null,
+  email: "hello@alastella.com" as string | null,
   /** How quickly support replies, e.g. "within two working days". */
   supportResponse: null as string | null,
   /** The refund policy, in a sentence or two. */
