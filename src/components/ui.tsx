@@ -56,8 +56,8 @@ export function ButtonLink({ href, children, variant = "ink", external = false }
 export const PRODUCTS = {
   hazardsign: "https://sign.alastella.com",
   eyeline: "https://eyeline.alastella.com",
-  eyelineFloat: "https://eyeline.alastella.com/download",
+  eyelineFloat: "https://eyeline.alastella.com/float",
   meetadev: "https://www.meetadev.xyz",
   youWrapped: "https://wrapped.alastella.com",
 };
-export const GITHUB = "https://github.com/alastella";
+export const GITHUB = "https://github.com/hazardsecurity";

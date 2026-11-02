@@ -15,7 +15,7 @@ const jsonLd = {
       url: "https://www.alastella.com",
       logo: "https://www.alastella.com/icon.svg",
       description: "A software company building focused tools for everyday jobs.",
-      sameAs: ["https://github.com/alastella"],
+      sameAs: ["https://github.com/hazardsecurity"],
       ...(COMPANY.email && {
         email: COMPANY.email,
         contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: COMPANY.email, url: "https://www.alastella.com/support" },
@@ -43,7 +43,7 @@ const jsonLd = {
     {
       "@type": "SoftwareApplication",
       name: "Eyeline Float",
-      url: "https://eyeline.alastella.com/download",
+      url: "https://eyeline.alastella.com/float",
       description: "An AI co-pilot for live interviews and calls, on a strip under your webcam that stays hidden from screen sharing.",
       applicationCategory: "BusinessApplication",
       operatingSystem: "macOS, Windows",
