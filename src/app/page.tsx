@@ -16,8 +16,6 @@ const jsonLd = {
       logo: "https://www.hazardsecurity.xyz/icon.svg",
       description: "A software company building focused tools for everyday jobs.",
       sameAs: ["https://github.com/alastella"],
-      ...(COMPANY.rcNumber && { identifier: { "@type": "PropertyValue", propertyID: "RC", value: COMPANY.rcNumber } }),
-      ...(COMPANY.registeredOffice && { address: { "@type": "PostalAddress", streetAddress: COMPANY.registeredOffice } }),
       ...(COMPANY.email && {
         email: COMPANY.email,
         contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: COMPANY.email, url: "https://www.hazardsecurity.xyz/support" },

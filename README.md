@@ -4,7 +4,7 @@ Homepage for **hazardsecurity.xyz**: the site of Alastella, the trading name of 
 
 ## Company details
 
-The legal name, RC number, registered office and contact details live in `src/lib/company.ts`. The footer, `/company`, `/support`, `/privacy` and the structured data all read from it. A value left as `null` shows on the site as a `[bracketed]` placeholder: fill it in exactly as on the certificate before deploying.
+The legal name and public contact details live in `src/lib/company.ts`. The footer, `/company`, `/support`, `/privacy` and the structured data all read from it. A value left as `null` is not shown: the sentence that needs it is left out. The RC number, registered office and phone number are deliberately never published.
 
 ## Run it
 

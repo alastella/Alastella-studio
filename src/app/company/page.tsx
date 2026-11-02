@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { LegalPage } from "@/components/LegalPage";
 import { PRODUCTS } from "@/components/ui";
-import { COMPANY, email, filled, office, rc } from "@/lib/company";
+import { COMPANY } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Company: Alastella",
@@ -19,10 +19,8 @@ export default function Company() {
     >
       <dl className="legal__facts">
         <dt>Legal name</dt><dd>{COMPANY.legalName}</dd>
-        <dt>RC number</dt><dd>{rc()}</dd>
-        <dt>Registered office</dt><dd>{office()}</dd>
-        <dt>Email</dt><dd>{COMPANY.email ? <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a> : email()}</dd>
-        <dt>Phone</dt><dd>{filled(COMPANY.phone, "phone")}</dd>
+        <dt>Trading name</dt><dd>{COMPANY.tradingName}</dd>
+        {COMPANY.email && <><dt>Email</dt><dd><a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a></dd></>}
       </dl>
       <h2 className="legal__h">Products we operate</h2>
       <ul>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { COMPANY, email, office, rc } from "@/lib/company";
+import { COMPANY } from "@/lib/company";
 import { Wordmark, GITHUB, PRODUCTS } from "./ui";
 
 /** Footer for every page: links, then the company's legal line. */
@@ -23,8 +23,8 @@ export function SiteFooter({ home = false }: { home?: boolean }) {
       </div>
       <div className="foot__legal">
         <p>
-          {COMPANY.tradingName} is the trading name of {COMPANY.legalName} (RC {rc()}). Registered office: {office()}. Contact:{" "}
-          {COMPANY.email ? <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a> : email()}.
+          {COMPANY.tradingName} is the trading name of {COMPANY.legalName}.
+          {COMPANY.email && <> Contact: <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>.</>}
         </p>
         <p className="mono foot__c">© 2026 {COMPANY.legalName}. All rights reserved.</p>
       </div>

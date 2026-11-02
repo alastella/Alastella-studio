@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AnalyticsChoice } from "@/components/AnalyticsChoice";
 import { LegalPage } from "@/components/LegalPage";
-import { COMPANY, email, office, rc } from "@/lib/company";
+import { COMPANY } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Privacy: Alastella",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 // This page covers www.hazardsecurity.xyz only. Each product (HazardSign AI, Eyeline Studio, Eyeline Float, meetadev) has its own policy.
 export default function Privacy() {
-  const mail = COMPANY.email ? <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a> : email();
+  const mail = COMPANY.email && <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>;
   return (
     <LegalPage
       eyebrow="Last updated 2 November 2026"
@@ -20,8 +20,8 @@ export default function Privacy() {
     >
       <h2 className="legal__h">Who is responsible</h2>
       <p>
-        This website is run by {COMPANY.legalName} (RC {rc()}), registered office {office()}. The company decides how the data described
-        here is used, and is responsible for it. Contact: {mail}.
+        This website is run by {COMPANY.legalName}, trading as Alastella. The company decides how the data described here is used,
+        and is responsible for it.{mail && <> Contact: {mail}.</>}
       </p>
       <h2 className="legal__h">What we collect</h2>
       <p>
@@ -41,12 +41,16 @@ export default function Privacy() {
       <h2 className="legal__h">Turning it off</h2>
       <p>If your browser sends Do Not Track, none of this is collected. You can also switch it off for this browser here:</p>
       <AnalyticsChoice />
-      <h2 className="legal__h">Your data, on request</h2>
-      <p>
-        You can ask us for a copy of the data we hold about your visits, or ask us to delete it. Email {mail} with the subject
-        &ldquo;Privacy request&rdquo;. Analytics data doesn&apos;t include your name, so we may not be able to match it to you; if we can, we&apos;ll
-        send it or delete it. For any other privacy question, use the same address.
-      </p>
+      {mail && (
+        <>
+          <h2 className="legal__h">Your data, on request</h2>
+          <p>
+            You can ask us for a copy of the data we hold about your visits, or ask us to delete it. Email {mail} with the subject
+            &ldquo;Privacy request&rdquo;. Analytics data doesn&apos;t include your name, so we may not be able to match it to you; if we can,
+            we&apos;ll send it or delete it. For any other privacy question, use the same address.
+          </p>
+        </>
+      )}
     </LegalPage>
   );
 }

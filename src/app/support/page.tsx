@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LegalPage } from "@/components/LegalPage";
 import { PRODUCTS } from "@/components/ui";
-import { COMPANY, email, filled } from "@/lib/company";
+import { COMPANY } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Support: Alastella",
@@ -10,17 +10,19 @@ export const metadata: Metadata = {
 };
 
 export default function Support() {
-  const mail = COMPANY.email ? <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a> : email();
+  const mail = COMPANY.email && <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>;
   return (
     <LegalPage
       eyebrow="Support"
       title="Get help"
-      lead={`Support for every Alastella product is handled by ${COMPANY.legalName}. Email us and we'll reply.`}
+      lead={`Support for every Alastella product is handled by ${COMPANY.legalName}.`}
     >
-      <dl className="legal__facts">
-        <dt>Email</dt><dd>{mail}</dd>
-        <dt>Response time</dt><dd>{filled(COMPANY.supportResponse, "response time")}</dd>
-      </dl>
+      {mail && (
+        <dl className="legal__facts">
+          <dt>Email</dt><dd>{mail}</dd>
+          {COMPANY.supportResponse && <><dt>Response time</dt><dd>{COMPANY.supportResponse}</dd></>}
+        </dl>
+      )}
       <h2 className="legal__h">What to include</h2>
       <ul>
         <li>Which product you are using: HazardSign AI, Eyeline Studio or Eyeline Float.</li>
@@ -29,10 +31,10 @@ export default function Support() {
       </ul>
       <h2 className="legal__h">Billing and accounts</h2>
       <p>
-        For questions about a payment, cancelling a subscription or deleting your account, email {mail} from the address on your account so
-        we can find it. You can also manage your subscription from inside{" "}
+        You can manage or cancel your subscription from inside{" "}
         <a href={PRODUCTS.hazardsign} target="_blank" rel="noreferrer">HazardSign AI</a> and{" "}
-        <a href={PRODUCTS.eyeline} target="_blank" rel="noreferrer">Eyeline Studio</a>.
+        <a href={PRODUCTS.eyeline} target="_blank" rel="noreferrer">Eyeline Studio</a>, and delete your account from each product&apos;s
+        Delete account page.{mail && <> For anything else about a payment or your account, email {mail} from the address on your account.</>}
       </p>
     </LegalPage>
   );
