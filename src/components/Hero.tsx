@@ -24,7 +24,7 @@ export function Nav() {
           <a href="#tools" className="roll-host"><Roll>Products</Roll></a>
           <a href="#community" className="roll-host"><Roll>Community</Roll></a>
           <a href="#principles" className="roll-host"><Roll>How we build</Roll></a>
-          <Link href="/company" className="roll-host"><Roll>Company</Roll></Link>
+          <Link href="/about" className="roll-host"><Roll>About</Roll></Link>
         </nav>
         <ButtonLink href="#tools" variant="ink">See the products</ButtonLink>
       </div>
@@ -115,7 +115,7 @@ export function Hero() {
         </motion.p>
         <motion.div className="hero__ctas" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 1.05 }}>
           <ButtonLink href="#tools" variant="tape">Explore the products</ButtonLink>
-          <ButtonLink href={PRODUCTS.hazardsign} variant="ghost" external>Try HazardSign AI</ButtonLink>
+          <ButtonLink href={PRODUCTS.eyelineFloat} variant="ghost" external>Get Eyeline Float</ButtonLink>
         </motion.div>
       </div>
 

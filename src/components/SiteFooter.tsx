@@ -15,6 +15,8 @@ export function SiteFooter({ home = false }: { home?: boolean }) {
           <a href={PRODUCTS.hazardsign} target="_blank" rel="noreferrer">HazardSign AI</a>
           <a href={PRODUCTS.eyeline} target="_blank" rel="noreferrer">Eyeline Studio</a>
           <a href={PRODUCTS.eyelineFloat} target="_blank" rel="noreferrer">Eyeline Float</a>
+          <Link href="/about">About</Link>
+          <Link href="/careers">Careers</Link>
           <Link href="/company">Company</Link>
           <Link href="/support">Support</Link>
           <Link href="/privacy">Privacy</Link>
