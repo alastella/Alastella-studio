@@ -1,6 +1,6 @@
 # Alastella
 
-Homepage for **hazardsecurity.xyz**: the site of Alastella, the trading name of Alastella Technologies Limited, which builds focused software for everyday jobs. Each product lives on its own subdomain (for example `sign.hazardsecurity.xyz` for HazardSign AI).
+Homepage for **alastella.com**: the site of Alastella, the trading name of Alastella Technologies Limited, which builds focused software for everyday jobs. Each product lives on its own subdomain (for example `sign.alastella.com` for HazardSign AI).
 
 ## Company details
 

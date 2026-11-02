@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-// This page covers www.hazardsecurity.xyz only. Each product (HazardSign AI, Eyeline Studio, Eyeline Float, meetadev) has its own policy.
+// This page covers www.alastella.com only. Each product (HazardSign AI, Eyeline Studio, Eyeline Float, meetadev) has its own policy.
 export default function Privacy() {
   const mail = COMPANY.email && <a href={`mailto:${COMPANY.email}`}>{COMPANY.email}</a>;
   return (
     <LegalPage
       eyebrow="Last updated 2 November 2026"
       title="Privacy on this website"
-      lead="This page is about www.hazardsecurity.xyz only. Each of our products has its own privacy policy, linked from inside the product."
+      lead="This page is about www.alastella.com only. Each of our products has its own privacy policy, linked from inside the product."
     >
       <h2 className="legal__h">Who is responsible</h2>
       <p>

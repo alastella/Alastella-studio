@@ -29,8 +29,8 @@ export default function Company() {
         <li><a href={PRODUCTS.eyelineFloat} target="_blank" rel="noreferrer">Eyeline Float</a></li>
       </ul>
       <p>
-        Hazardsecurity is a former name of Alastella, and our products still live at hazardsecurity.xyz addresses. Each product has its own
-        privacy policy and terms, linked from inside the product.
+        Hazardsecurity (hazardsecurity.xyz) is a former name of Alastella. Each product has its own privacy policy and terms, linked
+        from inside the product.
       </p>
       <h2 className="legal__h">Getting in touch</h2>
       <p>

@@ -6,7 +6,7 @@ const display = Bricolage_Grotesque({ variable: "--font-display", subsets: ["lat
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.hazardsecurity.xyz"),
+  metadataBase: new URL("https://www.alastella.com"),
   title: "Alastella: software for your daily needs",
   description: "Alastella is a software company building focused tools for everyday jobs: private by default, quick to learn, fairly priced.",
   alternates: { canonical: "/" },

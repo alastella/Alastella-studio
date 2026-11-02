@@ -54,10 +54,10 @@ export function ButtonLink({ href, children, variant = "ink", external = false }
 
 /** Where each product lives. Update when subdomains are connected. */
 export const PRODUCTS = {
-  hazardsign: "https://sign.hazardsecurity.xyz",
-  eyeline: "https://eyeline.hazardsecurity.xyz",
-  eyelineFloat: "https://eyeline.hazardsecurity.xyz/download",
+  hazardsign: "https://sign.alastella.com",
+  eyeline: "https://eyeline.alastella.com",
+  eyelineFloat: "https://eyeline.alastella.com/download",
   meetadev: "https://www.meetadev.xyz",
-  youWrapped: "https://wrapped.hazardsecurity.xyz",
+  youWrapped: "https://wrapped.alastella.com",
 };
 export const GITHUB = "https://github.com/alastella";
