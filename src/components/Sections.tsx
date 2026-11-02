@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import { motion, stagger, useReducedMotion } from "motion/react";
-import { ButtonLink, Wordmark, GITHUB, PRODUCTS } from "./ui";
+import { ButtonLink, GITHUB, PRODUCTS } from "./ui";
+import { SiteFooter } from "./SiteFooter";
 
 const EASE = [0.4, 0, 0.05, 1] as const;
 
@@ -26,7 +27,7 @@ export function Tools() {
         <div className="tools__head">
           <Reveal><span className="eyebrow">The shelf</span></Reveal>
           <Reveal delay={0.05}><h2 className="h2">One tool per job.<br />Each one finished.</h2></Reveal>
-          <Reveal delay={0.1}><p className="lead">Every product does a single everyday task end to end, with nothing to configure. Here is what&apos;s on the shelf, and what&apos;s being built.</p></Reveal>
+          <Reveal delay={0.1}><p className="lead">Every product does a single everyday task end to end, with nothing to configure. Here is what&apos;s on the shelf today.</p></Reveal>
         </div>
 
         <motion.ul className="shelf" initial="hidden" whileInView="show" viewport={{ once: true, margin: "0px 0px -10% 0px" }}
@@ -103,28 +104,6 @@ export function Tools() {
             <ButtonLink href={PRODUCTS.eyelineFloat} variant="ink" external>Download Eyeline Float</ButtonLink>
           </motion.li>
 
-          {/* 04 — in the workshop */}
-          <motion.li className="tool tool--soon tool--volt" variants={card} transition={{ duration: 1, ease: EASE }}>
-            <div className="tool__top">
-              <span className="mono tool__no">04</span>
-              <span className="tool__status tool__status--soon mono"><i />In the workshop</span>
-            </div>
-            <div className="tool__brand">
-              <Image src="/voltguard-mark.svg" alt="" width={72} height={72} unoptimized />
-              <div>
-                <h3 className="h3">VoltGuard AI</h3>
-                <p className="mono tool__kind">Revenue protection for DisCos</p>
-              </div>
-            </div>
-            <p className="body tool__desc">
-              Finds electricity theft for distribution companies. It checks the energy each feeder sends out against what its meters record, scores every meter for bypass and tampering, and sends inspectors to the right door with a GPS-tagged docket.
-            </p>
-            <ul className="tool__facts mono">
-              <li>Feeder energy balance</li>
-              <li>Meter risk scores</li>
-              <li>GPS inspection dockets</li>
-            </ul>
-          </motion.li>
         </motion.ul>
       </div>
 
@@ -149,7 +128,6 @@ export function Tools() {
         .tool__brand img { width: 3.6em; height: 3.6em; }
         .tool__kind { font-size: .75em; color: var(--sign); text-transform: uppercase; letter-spacing: .08em; margin-top: .25em; }
         .tool--eye .tool__kind { color: var(--eyeline); }
-        .tool--volt .tool__kind { color: #b37400; }
         .tool__desc { font-size: 1em; line-height: 1.55; }
         .tool__facts { list-style: none; display: flex; flex-wrap: wrap; gap: .5em; font-size: .72em; margin-top: auto; }
         .tool__facts li { padding: .45em .8em; border-radius: 99px; background: var(--bone-2); color: var(--ink-2); }
@@ -342,21 +320,7 @@ export function Closing() {
             <ButtonLink href={PRODUCTS.hazardsign} variant="ghost" external>Try HazardSign AI</ButtonLink>
           </div>
         </Reveal>
-        <footer className="foot">
-          <Wordmark />
-          <nav className="foot__links" aria-label="Footer">
-            <a href="#tools">Tools</a>
-            <a href="#community">Community</a>
-            <a href="#principles">How we build</a>
-            <a href={PRODUCTS.hazardsign} target="_blank" rel="noreferrer">HazardSign AI</a>
-            <a href={PRODUCTS.eyeline} target="_blank" rel="noreferrer">Eyeline Studio</a>
-            <a href={PRODUCTS.eyelineFloat} target="_blank" rel="noreferrer">Eyeline Float</a>
-            <a href={PRODUCTS.meetadev} target="_blank" rel="noreferrer">meetadev</a>
-            <a href={GITHUB} target="_blank" rel="noreferrer">GitHub</a>
-            <a href="/privacy">Privacy</a>
-          </nav>
-          <span className="mono foot__c">© 2026 Alastella</span>
-        </footer>
+        <SiteFooter home />
       </div>
       <style>{`
         .closing { padding-bottom: 2.5em; }
@@ -368,10 +332,6 @@ export function Closing() {
         .closing__card .lead { color: var(--ink-2); }
         .closing__btns { display: flex; gap: .75em; flex-wrap: wrap; }
         .closing__card .btn--ghost { box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--ink) 35%, transparent); }
-        .foot { display: flex; justify-content: space-between; align-items: center; gap: 2em; padding: 3em 0 1em; flex-wrap: wrap; }
-        .foot__links { display: flex; gap: 2em; flex-wrap: wrap; font-size: .95em; color: var(--ink-3); }
-        .foot__links a:hover { color: var(--ink); }
-        .foot__c { font-size: .75em; color: var(--muted); }
         @media (max-width: 767px) { .closing__card { padding: 2.5em 1.5em; } }
       `}</style>
     </section>

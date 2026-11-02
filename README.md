@@ -1,6 +1,10 @@
-# Alastella studio
+# Alastella
 
-Homepage for **hazardsecurity.xyz**: an independent studio building focused software for everyday jobs. Each product lives on its own subdomain (for example `sign.hazardsecurity.xyz` for HazardSign AI).
+Homepage for **hazardsecurity.xyz**: the site of Alastella, the trading name of Alastella Technologies Limited, which builds focused software for everyday jobs. Each product lives on its own subdomain (for example `sign.hazardsecurity.xyz` for HazardSign AI).
+
+## Company details
+
+The legal name, RC number, registered office and contact details live in `src/lib/company.ts`. The footer, `/company`, `/support`, `/privacy` and the structured data all read from it. A value left as `null` shows on the site as a `[bracketed]` placeholder: fill it in exactly as on the certificate before deploying.
 
 ## Run it
 

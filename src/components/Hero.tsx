@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Fragment, useEffect, useState } from "react";
 import { motion, stagger, useAnimationFrame, useMotionValue, useReducedMotion, useScroll, useSpring, useTransform, useVelocity } from "motion/react";
-import { ButtonLink, Roll, Wordmark, GITHUB, PRODUCTS } from "./ui";
+import { ButtonLink, Roll, Wordmark, PRODUCTS } from "./ui";
 
 const EASE = [0.4, 0, 0.05, 1] as const;
 
@@ -21,12 +21,12 @@ export function Nav() {
       <div className="wrap nav__in">
         <Link href="/" aria-label="Alastella home"><Wordmark /></Link>
         <nav className="nav__links" aria-label="Main">
-          <a href="#tools" className="roll-host"><Roll>Tools</Roll></a>
+          <a href="#tools" className="roll-host"><Roll>Products</Roll></a>
           <a href="#community" className="roll-host"><Roll>Community</Roll></a>
           <a href="#principles" className="roll-host"><Roll>How we build</Roll></a>
-          <a href={GITHUB} className="roll-host" target="_blank" rel="noreferrer"><Roll>GitHub</Roll></a>
+          <Link href="/company" className="roll-host"><Roll>Company</Roll></Link>
         </nav>
-        <ButtonLink href="#tools" variant="ink">See the tools</ButtonLink>
+        <ButtonLink href="#tools" variant="ink">See the products</ButtonLink>
       </div>
       <style>{`
         .nav { position: fixed; inset: 0 0 auto; z-index: 50; padding-top: 1em; }
@@ -83,7 +83,7 @@ export function Hero() {
     <section className="hero">
       <div className="wrap hero__in">
         <motion.span className="eyebrow" initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, ease: EASE, delay: .2 }}>
-          Independent software studio
+          Software company
         </motion.span>
         <motion.h1
           className="h1 hero__title"
@@ -114,14 +114,14 @@ export function Hero() {
           Alastella builds focused tools that each do one job properly: private by default, quick to learn and fairly priced.
         </motion.p>
         <motion.div className="hero__ctas" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 1.05 }}>
-          <ButtonLink href="#tools" variant="tape">Explore the tools</ButtonLink>
+          <ButtonLink href="#tools" variant="tape">Explore the products</ButtonLink>
           <ButtonLink href={PRODUCTS.hazardsign} variant="ghost" external>Try HazardSign AI</ButtonLink>
         </motion.div>
       </div>
 
       <div className="tapes">
         <Tape label="SOFTWARE FOR DAILY NEEDS" angle={-4} direction={-1} delay={0.5} />
-        <Tape label="ALASTELLA STUDIO" angle={3} direction={1} delay={0.75} />
+        <Tape label="BUILT BY ALASTELLA" angle={3} direction={1} delay={0.75} />
       </div>
 
       <style>{`

@@ -1,19 +1,27 @@
 import { Hero, Nav } from "@/components/Hero";
 import { Closing, Community, Principles, Tools } from "@/components/Sections";
+import { COMPANY } from "@/lib/company";
 
-// Structured data: the studio, its website and its live products.
+// Structured data: the company, its website and its live products. Contact details appear once confirmed in lib/company.
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": "https://www.hazardsecurity.xyz/#org",
-      name: "Alastella",
+      name: COMPANY.tradingName,
+      legalName: COMPANY.legalName,
       alternateName: ["Hazardsecurity", "Hazard Security", "hazardsecurity.xyz"],
       url: "https://www.hazardsecurity.xyz",
       logo: "https://www.hazardsecurity.xyz/icon.svg",
-      description: "An independent software studio building focused tools for everyday jobs.",
+      description: "A software company building focused tools for everyday jobs.",
       sameAs: ["https://github.com/alastella"],
+      ...(COMPANY.rcNumber && { identifier: { "@type": "PropertyValue", propertyID: "RC", value: COMPANY.rcNumber } }),
+      ...(COMPANY.registeredOffice && { address: { "@type": "PostalAddress", streetAddress: COMPANY.registeredOffice } }),
+      ...(COMPANY.email && {
+        email: COMPANY.email,
+        contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: COMPANY.email, url: "https://www.hazardsecurity.xyz/support" },
+      }),
     },
     { "@type": "WebSite", "@id": "https://www.hazardsecurity.xyz/#site", url: "https://www.hazardsecurity.xyz", name: "Alastella", alternateName: ["Hazardsecurity", "Hazard Security"], publisher: { "@id": "https://www.hazardsecurity.xyz/#org" } },
     {

@@ -23,13 +23,13 @@ export default function OpengraphImage() {
               <span style={{ background: "#ffd400", padding: "0 10px", borderRadius: 6 }}>every day.</span>
             </div>
           </div>
-          <div style={{ fontSize: 28, color: "#4f4d48", display: "flex" }}>An independent studio building focused tools that each do one job properly.</div>
+          <div style={{ fontSize: 28, color: "#4f4d48", display: "flex" }}>A software company building focused tools that each do one job properly.</div>
         </div>
         <div style={{ position: "absolute", left: -40, right: -40, bottom: 70, height: 56, background: STRIPES, transform: "rotate(-3deg)", display: "flex", alignItems: "center", justifyContent: "flex-end", paddingRight: 150 }}>
           <div style={{ background: "#ffd400", padding: "6px 24px", fontSize: 22, fontWeight: 700, letterSpacing: 6, color: "#0f0f0e", display: "flex" }}>SOFTWARE FOR DAILY NEEDS</div>
         </div>
         <div style={{ position: "absolute", left: -40, right: -40, bottom: 34, height: 56, background: STRIPES, transform: "rotate(2.5deg)", display: "flex", alignItems: "center", justifyContent: "flex-start", paddingLeft: 150 }}>
-          <div style={{ background: "#ffd400", padding: "6px 24px", fontSize: 22, fontWeight: 700, letterSpacing: 6, color: "#0f0f0e", display: "flex" }}>ALASTELLA STUDIO</div>
+          <div style={{ background: "#ffd400", padding: "6px 24px", fontSize: 22, fontWeight: 700, letterSpacing: 6, color: "#0f0f0e", display: "flex" }}>BUILT BY ALASTELLA</div>
         </div>
       </div>
     ),
