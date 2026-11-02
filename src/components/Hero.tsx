@@ -25,6 +25,7 @@ export function Nav() {
           <a href="#community" className="roll-host"><Roll>Community</Roll></a>
           <a href="#principles" className="roll-host"><Roll>How we build</Roll></a>
           <Link href="/about" className="roll-host"><Roll>About</Roll></Link>
+          <Link href="/careers" className="roll-host"><Roll>Careers</Roll></Link>
         </nav>
         <ButtonLink href="#tools" variant="ink">See the products</ButtonLink>
       </div>
@@ -35,6 +36,7 @@ export function Nav() {
         .nav.is-scrolled .nav__in { background: color-mix(in srgb, var(--bone) 80%, transparent); backdrop-filter: blur(14px) saturate(1.4); -webkit-backdrop-filter: blur(14px) saturate(1.4);
           box-shadow: 0 0 0 1px color-mix(in srgb, var(--ink) 9%, transparent), 0 14px 40px -20px rgba(15,15,14,.3); }
         .nav__links { display: flex; gap: 2.25em; font-size: .95em; font-weight: 500; color: var(--ink-2); }
+        @media (max-width: 1100px) { .nav__links { gap: 1.4em; } .nav__in { gap: 1.25em; } }
         @media (max-width: 860px) { .nav__links { display: none; } .nav__in { padding-inline: 1em .4em; height: 3.9em; } }
       `}</style>
     </header>
