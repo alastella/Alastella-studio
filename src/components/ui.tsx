@@ -60,4 +60,4 @@ export const PRODUCTS = {
   meetadev: "https://www.meetadev.xyz",
   youWrapped: "https://wrapped.alastella.com",
 };
-export const GITHUB = "https://github.com/hazardsecurity";
+export const GITHUB = "https://github.com/alastella";

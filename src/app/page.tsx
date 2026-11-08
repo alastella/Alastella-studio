@@ -15,7 +15,7 @@ const jsonLd = {
       url: "https://www.alastella.com",
       logo: "https://www.alastella.com/icon.svg",
       description: "An AI software development company building AI software for everyday use.",
-      sameAs: ["https://github.com/hazardsecurity"],
+      sameAs: ["https://github.com/alastella"],
       ...(COMPANY.email && {
         email: COMPANY.email,
         contactPoint: { "@type": "ContactPoint", contactType: "customer support", email: COMPANY.email, url: "https://www.alastella.com/support" },
