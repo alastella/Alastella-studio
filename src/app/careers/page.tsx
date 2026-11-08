@@ -6,7 +6,7 @@ import { COMPANY } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "Careers: Alastella",
-  description: "Work with Alastella, the company behind Eyeline Studio, Eyeline Float and HazardSign AI. See whether we're hiring and how to introduce yourself.",
+  description: "Work with Alastella, the AI software company behind Eyeline Studio, Eyeline Float and HazardSign AI. See whether we're hiring and how to introduce yourself.",
   alternates: { canonical: "/careers" },
 };
 

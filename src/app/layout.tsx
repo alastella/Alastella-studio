@@ -7,11 +7,11 @@ const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.alastella.com"),
-  title: "Alastella: software for your daily needs",
-  description: "Alastella is a software company building focused tools for everyday jobs: private by default, quick to learn, fairly priced.",
+  title: "Alastella: AI software for everyday use",
+  description: "Alastella is an AI software development company building AI software for everyday use: private by default, quick to learn, fairly priced.",
   alternates: { canonical: "/" },
-  openGraph: { type: "website", title: "Alastella: software for your daily needs", description: "Software for the small jobs of every day.", url: "/", siteName: "Alastella", locale: "en_NG" },
-  twitter: { card: "summary_large_image", title: "Alastella: software for your daily needs", description: "Software for the small jobs of every day." },
+  openGraph: { type: "website", title: "Alastella: AI software for everyday use", description: "AI software built for everyday use.", url: "/", siteName: "Alastella", locale: "en_NG" },
+  twitter: { card: "summary_large_image", title: "Alastella: AI software for everyday use", description: "AI software built for everyday use." },
 };
 
 export const viewport: Viewport = { themeColor: "#efede6" };

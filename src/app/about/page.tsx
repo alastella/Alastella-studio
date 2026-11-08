@@ -7,7 +7,7 @@ import { COMPANY } from "@/lib/company";
 
 export const metadata: Metadata = {
   title: "About: Alastella",
-  description: "Alastella builds focused tools that each do one job properly: Eyeline Studio, Eyeline Float and HazardSign AI. Private by default, fairly priced in naira.",
+  description: "Alastella is an AI software development company building AI software for everyday use: Eyeline Studio, Eyeline Float and HazardSign AI. Private by default, fairly priced in naira.",
   alternates: { canonical: "/about" },
 };
 
@@ -16,7 +16,7 @@ export default function About() {
     <LegalPage
       eyebrow="About"
       title="About Alastella"
-      lead="Alastella builds focused tools that each do one job properly: private by default, quick to learn and fairly priced."
+      lead="Alastella is an AI software development company. We build AI software for everyday use: focused tools that each do one job properly, private by default, quick to learn and fairly priced."
     >
       <h2 className="legal__h">Who&apos;s behind it</h2>
       <p>

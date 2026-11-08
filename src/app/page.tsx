@@ -14,7 +14,7 @@ const jsonLd = {
       alternateName: ["Hazardsecurity", "Hazard Security", "hazardsecurity.xyz"],
       url: "https://www.alastella.com",
       logo: "https://www.alastella.com/icon.svg",
-      description: "A software company building focused tools for everyday jobs.",
+      description: "An AI software development company building AI software for everyday use.",
       sameAs: ["https://github.com/hazardsecurity"],
       ...(COMPANY.email && {
         email: COMPANY.email,

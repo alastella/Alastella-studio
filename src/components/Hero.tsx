@@ -80,19 +80,19 @@ function Tape({ label, angle, direction, delay }: { label: string; angle: number
 /* ---------------- Hero ---------------- */
 export function Hero() {
   const reduce = useReducedMotion();
-  const words = ["Software", "for", "the", "small", "jobs", "of"];
+  const words = ["AI", "software", "built", "for"];
   return (
     <section className="hero">
       <div className="wrap hero__in">
         <motion.span className="eyebrow" initial={reduce ? false : { opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .8, ease: EASE, delay: .2 }}>
-          Software company
+          AI software company
         </motion.span>
         <motion.h1
           className="h1 hero__title"
           initial="hidden"
           animate="show"
           variants={{ show: { transition: { delayChildren: stagger(0.06, { startDelay: 0.3 }) } } }}
-          aria-label="Software for the small jobs of every day."
+          aria-label="AI software built for everyday use."
         >
           {/* A real space after each word (not padding) so crawlers read the headline as words. */}
           {words.map((w) => (
@@ -106,14 +106,14 @@ export function Hero() {
           ))}
           <span className="hero__word hero__mark" aria-hidden>
             <motion.span style={{ display: "inline-block" }} variants={{ hidden: reduce ? { opacity: 0 } : { y: "110%" }, show: { y: "0%", opacity: 1 } }} transition={{ duration: 1, ease: EASE }}>
-              every&nbsp;day.
+              everyday&nbsp;use.
             </motion.span>
             {/* highlighter swipe */}
             <motion.span className="hero__swipe" initial={reduce ? false : { scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: .7, ease: EASE, delay: 1.25 }} />
           </span>
         </motion.h1>
         <motion.p className="lead" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: .9 }}>
-          Alastella builds focused tools that each do one job properly: private by default, quick to learn and fairly priced.
+          Alastella is an AI software development company. We build AI software for everyday use: focused tools that each do one job properly, private by default and fairly priced.
         </motion.p>
         <motion.div className="hero__ctas" initial={reduce ? false : { opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, ease: EASE, delay: 1.05 }}>
           <ButtonLink href="#tools" variant="tape">Explore the products</ButtonLink>
@@ -122,7 +122,7 @@ export function Hero() {
       </div>
 
       <div className="tapes">
-        <Tape label="SOFTWARE FOR DAILY NEEDS" angle={-4} direction={-1} delay={0.5} />
+        <Tape label="AI SOFTWARE FOR EVERYDAY USE" angle={-4} direction={-1} delay={0.5} />
         <Tape label="BUILT BY ALASTELLA" angle={3} direction={1} delay={0.75} />
       </div>
 
